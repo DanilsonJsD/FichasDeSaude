@@ -1,0 +1,396 @@
+<style>
+
+    /* -- PADRÕES DE CAIXA -- */
+    
+        .box{
+            border-radius: 8px; color: #B2B2B2; 
+            border: 1px solid; 
+        }
+    
+        .box-title{
+            border-radius: 4px;
+            background: #DDD;
+            width: 100%;
+            font-size: 12px;
+            font-weight: 700;
+        }
+    
+    /* -- OPCIONAL -- */
+    
+        .conteudo{
+            font-family: 'Roboto', sans-serif !important;
+        }
+    
+    /* -- MARGINS TOPS PADRÕES -- */
+    
+        .mt-5{
+            margin-top: 5px;
+        }
+    
+        .mt-10{
+            margin-top: 10px;
+        }
+    
+        .mt-20{
+            margin-top: 20px;
+        }
+    
+        .mt-50{
+            margin-top: 50px;
+        }
+    
+        .mt-55{
+            margin-top: 55px;
+        }
+    
+        .mt-65{
+            margin-top: 65px;
+        }
+    
+    /* -- TAMANHO DE FONTES PADRÕES -- */
+    
+        .fs-8{
+            font-size: 8px;
+            color: black;
+        }
+        .fs-10{
+            font-size: 10px;
+            color: black;
+        }
+    
+        .fs-12{
+            font-size: 12px;
+            color: black;
+        }
+    
+    /* -- CLASSES DE TAMANHOS -- */
+    
+        .w-5{
+            width: 5%;
+        }
+    
+        .w-10{
+            width: 10%;
+        }
+    
+        .w-20{
+            width: 20%;
+        }
+    
+        .w-50{
+            width: 50%;
+        }
+    
+        .w-55{
+            width: 55%;
+        }
+    
+        .w-65{
+            width: 65%;
+        }
+    
+        .w-100{
+            width: 100%;
+        }
+    
+    /* -- PADRÕES DE CAIXA DE TEXTO -- */
+    
+        .textarea {
+            padding: 8px;
+            border-radius: 4px;
+            border: thin solid #B2B2B2;
+            font-size: 10px;
+            letter-spacing: 1px;
+            height: 200px;
+            resize: vertical;
+            width: 100%;
+        }
+    
+        .input{
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            padding: 8px;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        }
+    
+    /* -- PADRÃO DE BOTÃO -- */
+    
+        .rounded-button {
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          padding: 8px;
+          background-color: #DDD;
+          cursor: pointer;
+          color: black;
+          width: 25%;
+        }
+        
+        .ml-10{
+            margin-left: 10%;
+        }
+    
+    /* --------------------- */
+    
+        ::placeholder{
+            text-align: center;
+        }
+    
+        p{
+            margin: 0;
+            padding: 0;
+        }
+    
+        th, td {
+            padding: 8px;
+            text-align: center;
+        }
+    
+    </style>
+    
+    <div class="fs-12" style="line-height: 1.5;">
+        <!-- CABEÇALHO PADRÃO -->
+        <div class="col-xs-12">
+            <p class="fs-10">{$cliente_nome} | CRM: {$crmMedicoLogado} {$crmufMedicoLogado}</p>
+        </div>
+        <div class="col-xs-12 mt-10 box fs-12">
+            <p style="color: black; padding: 8px;"><strong>PACIENTE:</strong> {$q1_valor}</p>
+        </div>
+    
+        <!-- CASO NECESSÁRIO -->
+        <div class="mt-5">
+            <div class="col-xs-7 box fs-12">
+                <p style="color: black; padding: 8px;"><strong>ENDEREÇO:</strong> {$q2_valor}</p>
+            </div>
+    
+            <div class="col-xs-4 box fs-12 ml-10">
+                <p style="color: black; padding: 8px;"><strong>TELEFONE:</strong> {$q3_valor}</p>
+            </div>
+        </div>
+        <div class="mt-5">
+            <div class="col-xs-3 box fs-12">
+                <p style="color: black; padding: 8px;"><strong>PESO:</strong> {$q4_valor}</p>
+            </div>
+    
+            <div class="col-xs-3 box fs-12" style="margin-left: 8%;">
+                <p style="color: black; padding: 8px;"><strong>ALTURA:</strong> {$q5_valor}</p>
+            </div>
+    
+            <div class="col-xs-4 box fs-12" style="margin-left: 10%;">
+                <p style="color: black; padding: 8px;"><strong>IMC:</strong> {$q6_valor}</p>
+            </div>
+        </div>
+    
+        <div class="mt-5">
+            <div class="col-xs-3 box fs-12">
+                <p style="color: black; padding: 8px;"><strong>RG:</strong> {$q7_valor}</p>
+            </div>
+    
+            <div class="col-xs-3 box fs-12" style="margin-left: 8%;">
+                <p style="color: black; padding: 8px;"><strong>CPF:</strong> {$q8_valor}</p>
+            </div>
+    
+            <div class="col-xs-4 box fs-12 ml-10">
+                <p style="color: black; padding: 8px;"><strong>SEXO:</strong> {$q10_valor}</p>
+            </div>
+        </div>
+        <div class="col-xs-12 box fs-12 mt-5">
+            <p style="color: black; padding: 8px;"><strong>DATA DE NASCIMENTO:</strong> {$q9_valor}</p>
+        </div>
+        <!-- NOME DA FICHA -->
+        <div class="col-xs-12 box-title  mt-10"> 
+            <p style="padding: 8px; fs-12; text-align: center;"><strong>NOME DA FICHA</strong></p>
+        </div>
+    
+        <!-- CORPO DA FICHA -->
+    
+        <div class="col-xs-12 mt-10 box fs-12">
+            <p style="color: black; padding: 8px;"><strong>Queixa do Paciente:</strong> {$q11_valor}</p>
+        </div>
+        <div class="col-xs-12 box mt-5">
+            <p style="color: black; padding: 8px;"><strong>CID-10:</strong> {$q12_valor}</p>
+        </div>
+        <div class="col-xs-12 mt-5 box">
+            <p style="color: black; padding: 8px;"><strong>Observações:</strong> {$q13_valor|nl2br}</p>
+        </div>
+    
+        <div class="col-xs-12 mt-5 fs-12">
+            <p style="margin: 0; padding: 0;"><strong>Paciente tem comorbidade(s)?</strong></p>
+            <p style="margin: 0; padding: 0;">{if $q14_valor eq "Sim"} {$q14_valor}. Qual? {$q15_valor} {else} {$q14_valor}.{/if}</p>
+        </div>
+    
+        <div class="col-xs-12 mt-10">
+            <p><strong>Comorbidades do paciente:</strong></p>
+        </div>
+    
+        {if $q16_valor neq ""}
+        <div class="col-xs-3">
+            <ul style="margin: 0;">
+                <li>{$q16_valor}</li>
+            </ul>
+        </div>
+        {/if}
+        {if $q17_valor neq ""}
+        <div class="col-xs-3">
+            <ul style="margin: 0;">
+                <li>{$q17_valor}</li>
+            </ul>
+        </div>
+        {/if}
+        {if $q18_valor neq ""}
+        <div class="col-xs-3">
+            <ul style="margin: 0;">
+                <li>{$q18_valor}</li>
+            </ul>
+        </div>
+        {/if}
+        {if $q19_valor neq ""}
+        <div class="col-xs-3">
+            <ul style="margin: 0;">
+                <li>{$q19_valor}</li>
+            </ul>
+        </div>
+        {/if}
+        {if $q20_valor neq ""}
+        <div class="col-xs-3">
+            <ul style="margin: 0;">
+                <li>{$q20_valor}</li>
+            </ul>
+        </div>
+        {/if}
+        {if $q21_valor neq ""}
+        <div class="col-xs-3">
+            <ul style="margin: 0;">
+                <li>{$q21_valor}</li>
+            </ul>
+        </div>
+        {/if}
+        {if $q22_valor neq ""}
+        <div class="col-xs-3">
+            <ul style="margin: 0;">
+                <li>{$q22_valor}</li>
+            </ul>
+        </div>
+        {/if} 
+        {if $q23_valor neq ""}
+        <div class="col-xs-3">
+            <ul style="margin: 0;">
+                <li>{$q23_valor}</li>
+            </ul>
+        </div>
+        {/if}
+        {if $q34_valor neq ""}
+        <div class="col-xs-3">
+            <ul style="margin: 0;">
+                <li>{$q35_valor}</li>
+            </ul>
+        </div>
+        {/if}
+        <div class="col-xs-12 mt-10"> <!-- ATENÇÃO AOS PARAMETROS ADICIONADOS NOS SELETORES TH E TD -->
+            <table class="table-bordered"> <!-- ATENÇÃO A CLASS DE TABELA UTILIZADA -->
+                <!-- HEADER EM MAIÚSCULO -->
+                <thead>
+                    <tr>
+                        <th>HEADER 1</th>
+                        <th>HEADER 2</th>
+                        <th>HEADER 3</th>
+                        <th>HEADER 4</th>
+                        <th>HEADER 5</th>
+                        <th>HEADER 6</th>
+                        <th>HEADER 7</th>
+                        <th>HEADER 8</th>
+                        <th>HEADER 9</th>
+                        <th>HEADER 10</th>
+                        <th>HEADER 11</th>
+                        <th>HEADER 12</th>
+                        <th>HEADER 13</th>
+                        <th>HEADER 14</th>
+                        <th>HEADER 15</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Célula 1</td>
+                    <td>Célula 2</td>
+                    <td>Célula 3</td>
+                    <td>Célula 4</td>
+                    <td>Célula 5</td>
+                    <td>Célula 6</td>
+                    <td>Célula 7</td>
+                    <td>Célula 8</td>
+                    <td>Célula 9</td>
+                    <td>Célula 10</td>
+                    <td>Célula 11</td>
+                    <td>Célula 12</td>
+                    <td>Célula 13</td>
+                    <td>Célula 14</td>
+                    <td>Célula 15</td>
+                </tr>
+                <tr>
+                    <td>Célula 16</td>
+                    <td>Célula 17</td>
+                    <td>Célula 18</td>
+                    <td>Célula 19</td>
+                    <td>Célula 20</td>
+                    <td>Célula 21</td>
+                    <td>Célula 22</td>
+                    <td>Célula 23</td>
+                    <td>Célula 24</td>
+                    <td>Célula 25</td>
+                    <td>Célula 26</td>
+                    <td>Célula 27</td>
+                    <td>Célula 28</td>
+                    <td>Célula 29</td>
+                    <td>Célula 30</td>
+                </tr>
+                <tr>
+                    <td>Célula 31</td>
+                    <td>Célula 32</td>
+                    <td>Célula 33</td>
+                    <td>Célula 34</td>
+                    <td>Célula 35</td>
+                    <td>Célula 36</td>
+                    <td>Célula 37</td>
+                    <td>Célula 38</td>
+                    <td>Célula 39</td>
+                    <td>Célula 40</td>
+                    <td>Célula 41</td>
+                    <td>Célula 42</td>
+                    <td>Célula 43</td>
+                    <td>Célula 44</td>
+                    <td>Célula 45</td>
+                </tr>
+                <tr>
+                    <td>Célula 46</td>
+                    <td>Célula 47</td>
+                    <td>Célula 48</td>
+                    <td>Célula 49</td>
+                    <td>Célula 50</td>
+                    <td>Célula 51</td>
+                    <td>Célula 52</td>
+                    <td>Célula 53</td>
+                    <td>Célula 54</td>
+                    <td>Célula 55</td>
+                    <td>Célula 56</td>
+                    <td>Célula 57</td>
+                    <td>Célula 58</td>
+                    <td>Célula 59</td>
+                    <td>Célula 60</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="col-xs-6 fs-12" style="text-align: center;">
+        <strong>{$cidadeMedico}, {$datafichaporextenso}</strong>
+    </div>
+    <div class="col-xs-6 fs-12" style="text-align: center;">
+        <p style="margin: 0; padding: 0;"><strong>{$nomeMedicoLogado}</strong></p>
+        <p style="margin: 0; padding: 0;">{$especialidadeMedico}</p>
+        <p style="margin: 0; padding: 0;">{$conselhodeclasse} {$crmMedicoLogado} {$crmufMedicoLogado}</p>
+    </div> 

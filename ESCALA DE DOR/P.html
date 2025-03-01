@@ -1,0 +1,522 @@
+<style>
+    /* -- PADRÕES DE CAIXA -- */
+
+    .box {
+        border-radius: 8px;
+        color: #8f9394;
+        border: 1px solid;
+    }
+
+    .box-title {
+        border-radius: 4px;
+        background: #a4a7a4;
+        width: 98%;
+        font-size: 12px;
+        font-weight: 700;
+    }
+
+    /* -- OPCIONAL -- */
+
+    .conteudo {
+        font-family: 'Roboto', sans-serif !important;
+    }
+
+    /* -- MARGINS TOPS PADRÕES -- */
+
+    .mt-5 {
+        margin-top: 5px;
+    }
+
+    .mt-10 {
+        margin-top: 10px;
+    }
+
+    .mt-20 {
+        margin-top: 20px;
+    }
+
+    .mt-50 {
+        margin-top: 50px;
+    }
+
+    .mt-55 {
+        margin-top: 55px;
+    }
+
+    .mt-65 {
+        margin-top: 65px;
+    }
+
+    /* -- TAMANHO DE FONTES PADRÕES -- */
+
+    .fs-8 {
+        font-size: 8px;
+        color: black;
+    }
+
+    .fs-10 {
+        font-size: 10px;
+        color: black;
+    }
+
+    .fs-12 {
+        font-size: 12px;
+        color: black;
+    }
+
+    /* -- CLASSES DE TAMANHOS -- */
+
+    .w-5 {
+        width: 5%;
+    }
+
+    .w-10 {
+        width: 10%;
+    }
+
+    .w-20 {
+        width: 20%;
+    }
+
+    .w-50 {
+        width: 50%;
+    }
+
+    .w-55 {
+        width: 55%;
+    }
+
+    .w-65 {
+        width: 65%;
+    }
+
+    .w-100 {
+        width: 100%;
+    }
+
+    /* -- PADRÕES DE CAIXA DE TEXTO -- */
+
+    .textarea {
+        padding: 8px;
+        border-radius: 4px;
+        border: thin solid #B2B2B2;
+        font-size: 10px;
+        letter-spacing: 1px;
+        height: 200px;
+        resize: vertical;
+        width: 100%;
+    }
+
+    .input {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        padding: 8px;
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+
+    .inputs-container {
+        height: 3%;
+        width: 100%;
+        background-color: #d3d3d3;
+        padding: 6px;
+        border-radius: 5px;
+    }
+
+    .input-box {
+        flex: 1;
+    }
+
+    .input-box.left {
+        flex: 2;
+    }
+
+    .input-box.right {
+        border: 2px solid #333;
+    }
+
+    .input-box input {
+        width: 100%;
+        background-color: transparent;
+        padding: 8px;
+        color: #333;
+        border-radius: 4px;
+        text-align: left;
+        padding-left: 15px;
+    }
+
+    .input-box input::placeholder {
+        text-align: left;
+    }
+
+    .input-box input:focus {
+        outline: none;
+    }
+
+    .icheckbox_square-green {
+        margin-left: 20px;
+    }
+
+    /* -- PADRÃO DE BOTÃO -- */
+
+    .rounded-button {
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 8px;
+        background-color: #DDD;
+        cursor: pointer;
+        color: black;
+        width: 25%;
+    }
+
+    /* --------------------- */
+    .container {
+        width: 100%;
+    }
+
+    .left {
+        margin-left: 20px;
+    }
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .col {
+        flex: 1;
+    }
+
+    .escala-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .escala-container input {
+        margin: 0 5px;
+        transform: scale(1.2);
+    }
+
+    .escala-container label {
+        display: block;
+        text-align: center;
+        font-size: 14px;
+        margin-top: 5px;
+    }
+
+    /* --------------------- */
+
+    ::placeholder {
+        text-align: center;
+    }
+
+    p {
+        margin: 0;
+        padding: 0;
+    }
+
+    th,
+    td {
+        padding: 8px;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="inputs-container">
+            <div class="row mb-3">
+                <div class="col-md-8">
+                    <div><strong>NOME: </strong>{$nomepcte}</div>
+                </div>
+                <div class="col-md-4 input-box">
+                    <input type="text" name="{$q2_name}" id="{$q2_id}" placeholder="REG:" class="input fs-12 w-100">
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row left">
+            <div class="col-md-6">
+                <div><strong>Sexo: </strong>{$sexopcte}</div>
+                <div><strong>Idade: </strong>{$idadepcte}</div>
+            </div>
+            <div class="col-md-6">
+                <div><strong>Bairro: </strong>{$bairropcte}</div>
+                <div><strong>Cidade: </strong>{$cidadepcte}</div>
+            </div>
+        </div>
+        <div class="row left">
+            <div class="col-md-6">
+                <div><strong>Profissão: </strong>{$profissaopcte}</div>
+            </div>
+            <div class="col-md-6">
+                <div><strong>Telefone: </strong>{$telefonepcte}</div>
+            </div>
+        </div>
+        <div class="col-xs-12 box-title mt-10" style="height: 7%; width: 100%;">
+            <div class="col-xs-12 mt-5" style="font-size:15px;">
+                <strong style="font-size:19px; margin-left: 5px;">Como você tomou conhecimento da Real Dor?</strong>
+                <input type="radio" name="{$q1_name}" id="{$q1_id}" value="1"> Jornal
+                <input type="radio" name="{$q1_name}" id="{$q1_id}" value="2"> Entrevista em Rádio/TV
+            </div>
+            <div class="col-xs-12 mt-5" style="font-size:15px;">
+                <input type="radio" name="{$q1_name}" id="{$q1_id}" value="Indicação de amigos/parentes"> Indicação de
+                amigos/parentes
+                <input type="radio" name="{$q1_name}" id="{$q1_id}" value="3"> Indicação de outro médico
+                <span id="RDoutras" style="display: none;" class="mt-5">
+                    <input type="text" name="{$q1_name}" id="{$q1_id}" placeholder="Qual(is)?" class="input w-50">
+                </span>
+            </div>
+            <div class="col-xs-12 mt-5" style="font-size:15px;">
+                <input type="radio" name="{$q1_name}" id="{$q1_id}" value="7"> Instagram
+                <input type="radio" name="{$q1_name}" id="{$q1_id}" value="4"> Facebook
+                <input type="radio" name="{$q1_name}" id="{$q1_id}" value="5"> Google
+                <input type="radio" name="{$q1_name}" id="{$q1_id}" value="6"> Site do Hosp. Português
+                <input type="radio" name="{$q1_name}" id="RealDorOutras" value="Outras" class="callFunQual"> Outras
+                <span id="RDoutras" style="display: none;" class="mt-5">
+                    <input type="text" name="{$q2_name}" id="{$q2_id}" placeholder="Qual(is)?" class="input w-50">
+                </span>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="col-xs-12">
+            <div class="col-xs-12 mt-5">
+                <strong style="font-size: larger;">Qual a sua Dor Principal?</strong>
+                <input type="radio" name="{$q3_name}" id="{$q3_id}" value="Não"> Lombar (costas, quadril)
+                <input type="radio" name="{$q3_name}" id="{$q3_id}" value="Não"> Cervical (pescoço, ombro)
+                <input type="radio" name="{$q3_name}" id="{$q3_id}" value="Indicação de amigos/parentes"> Joelho (dir.
+                ou
+                esq.)
+            </div>
+            <div class="col-xs-12 mt-5">
+                <input type="radio" name="{$q3_name}" id="{$q3_id}" value="Não"> Membros inferiores (coxa, pé,
+                panturrilha,
+                tornozelo, pernas)
+                <input type="radio" name="{$q3_name}" id="{$q3_id}" value="Não"> Membros superiores (braço, pulso, mão,
+                antebraço)
+            </div>
+            <div class="col-xs-12 mt-5">
+                <input type="radio" name="{$q3_name}" id="{$q3_id}" value="Não"> Dor de cabeça (enxaqueca, cefaleia)
+                <input type="radio" name="{$q3_name}" id="RealDorOutras" value="Outras" class="callFunQual"> Outras
+                <span id="RDoutras" style="display: none;" class="mt-5">
+                    <input type="text" name="{$q4_name}" id="{$q4_id}" placeholder="Qual(is)?" class="input w-50">
+                </span>
+            </div>
+        </div>
+        <br>
+
+        <div class="col-xs-12 mt-5 input-box">
+            <input type="text" name="{$q5_name}" id="{$q5_id}" placeholder="Quando iniciou?" class="input fs-12 w-100">
+        </div>
+
+        <div class="col-xs-12 mt-5 input-box">
+            <input type="text" name="{$q6_name}" id="{$q6_id}" placeholder="Como se sente hoje?"
+                class="input fs-12 w-100">
+        </div>
+        </p>
+        <br>
+        <div class="col-xs-12 box-title text-center mt-10" style="height: 3%; width: 100%;">
+            <p><strong style="font-size:19px;">Característica da Dor</strong></p>
+        </div>
+        <div class="col-xs-12 mt-5" style="margin-bottom: 15px; margin-top: 20px;">
+            <h6 class="col-xs-2"><input type="checkbox" name="{$q7_name}" id="{$q7_id}" value="Agulhada"> Agulhada</h6>
+            <h6 class="col-xs-2"><input type="checkbox" name="{$q8_name}" id="{$q8_id}" value="Choque"> Choque</h6>
+            <h6 class="col-xs-2"><input type="checkbox" name="{$q9_name}" id="{$q9_id}" value="Fisgada"> Fisgada</h6>
+            <h6 class="col-xs-2"><input type="checkbox" name="{$q10_name}" id="{$q10_id}" value="Latejante"> Latejante</h6>
+            <h6 class="col-xs-2"><input type="checkbox" name="{$q11_name}" id="{$q11_id}" value="Queimação"> Queimação</h6>
+            <h6 class="col-xs-2"><input type="checkbox" name="{$q12_name}" id="{$q12_id}" value="Aperto"> Aperto</h6>
+            <h6 class="col-xs-2"><input type="checkbox" name="{$q13_name}" id="{$q13_id}" value="Facada"> Facada</h6>
+            <h6 class="col-xs-2"><input type="checkbox" name="{$q14_name}" id="{$q14_id}" value="Formigamento"> Formigamento</h6>
+            <h6 class="col-xs-2"><input type="checkbox" name="{$q15_name}" id="{$q15_id}" value="Pesada"> Pesada</h6>
+            <h6 class="col-xs-2"><input type="checkbox" name="{$q16_name}" id="{$q16_id}" class="callFunOutros" value="Outros"> Outra
+            <span id="comorbidade-qual" style="display: none;" class="mt-5">
+                <input type="text" name="{$q17_name}" id="{$q17_id}" placeholder="Qual(is)?" class="input w-50">
+            </span></h6>
+        </div>
+        <br>
+        <div class="col-xs-12 mt-5 input-box">
+            <input type="text" name="{$q18_name}" id="{$q18_id}" placeholder="Fatores que aliviam a dor: "
+                class="input fs-12 w-100">
+        </div>
+        <div class="col-xs-12 mt-5 input-box">
+            <input type="text" name="{$q19_name}" id="{$q19_id}" placeholder="Fatores que pioram a dor: "
+                class="input fs-12 w-100">
+        </div>
+        <br>
+        <div class="col-xs-12 box-title text-center mt-10" style="height: 3%; width: 100%;">
+            <p><strong style="font-size:19px; margin-left: 5px;">Patologias</strong></p>
+        </div>
+        <div class="col-xs-12 mt-5" style="margin-bottom: 5px;">
+            <input type="checkbox" name="{$q20_name}" id="{$q20_id}" value="Agulhada"> Hipertensão arterial
+            <input type="checkbox" name="{$q21_name}" id="{$q21_id}" value="Choque"> Diabetes
+            <input type="checkbox" name="{$q22_name}" id="{$q22_id}" value="Fisgada"> Asma brônquica
+            <input type="checkbox" name="{$q23_name}" id="{$q23_id}" value="Gastrite, acidez, refluxo"> Gastrite,
+            acidez, refluxo
+            <input type="checkbox" name="{$q24_name}" id="{$q24_id}" value="Doença renal"> Doença renal
+            <input type="checkbox" name="{$q25_name}" id="{$q25_id}" value="Doença hepática"> Doença hepática
+            <input type="checkbox" name="{$q26_name}" id="{$q26}" class="callFunOutros" value="Outros"> Outras
+            <span id="comorbidade-qual" style="display: none;" class="mt-5">
+                <input type="text" name="{$q27_name}" id="{$q27_id}" placeholder="Qual(is)?" class="input w-50">
+            </span>
+        </div>
+        <br>
+        <p><strong>Fuma? </strong>
+            <input type="radio" name="{$q28_name}" id="{$q28_id}" value="Sim"> Sim
+            <input type="radio" name="{$q28_name}" id="{$q28_id}" value="Não"> Não
+        </p>
+        <p><strong>Consome bebidas alcoólicas? </strong>
+            <input type="radio" name="{$q29_name}" id="{$q29_id}" value="Sim"> Sim
+            <input type="radio" name="{$q29_name}" id="{$q29_id}" value="Não"> Não
+        </p>
+        <p><strong>Faz atividades físicas? </strong>
+            <input type="radio" name="{$q30_name}" id="{$q30_id}" value="Sim"> Sim
+            <input type="radio" name="{$q30_name}" id="{$q30_id}" value="Não"> Não
+        </p>
+        <br>
+        <p>
+        <div class="col-xs-6 mt-5 input-box">
+            <input type="text" name="{$q31_name}" id="{$q31_id}" placeholder="Cirurgias realizadas: "
+                class="input fs-12 w-100">
+        </div>
+        </p>
+        <p></p>
+        <p>
+        <div class="col-xs-6 mt-5 input-box">
+            <input type="text" name="{$q32_name}" id="{$q32_id}" placeholder="Alergias: " class="input fs-12 w-100">
+        </div>
+        </p>
+        <p>
+        <div class="col-xs-6 mt-5 input-box">
+            <input type="text" name="{$q33_name}" id="{$q33_id}" placeholder="Medicamentos que faz uso atualmente: "
+                class="input fs-12 w-100">
+        </div>
+        </p>
+        <div class="col-xs-12 box-title text-center mt-10" style="height: 3%; width: 100%;">
+            <p><strong style="font-size:19px; margin-left: 5px;">Tratamentos complementares</strong></p>
+        </div>
+        <div>
+            <input type="checkbox" name="{$q16_name}" id="{$q16_id}" value="Terapia Ocupacional"> Terapia Ocupacional
+            <input type="checkbox" name="{$q17_name}" id="{$q17_id}" value="Psicólogo"> Psicólogo
+            <input type="checkbox" name="{$q18_name}" id="{$q18_id}" value="Nutricionista"> Nutricionista
+            <input type="checkbox" name="{$q19_name}" id="{$q19_id}" value="Acupuntura"> Acupuntura
+            <input type="checkbox" name="{$q20_name}" id="{$q20_id}" value="Psiquiatra"> Psiquiatra
+            <input type="checkbox" name="{$q20_name}" id="{$q20_id}" value="Pilates"> Pilates
+            <input type="checkbox" name="{$q20_name}" id="{$q20_id}" value="Fisioterapia"> Fisioterapia
+            <input type="checkbox" name="{$q20_name}" id="{$q20_id}" value="Esportes"> Esportes
+            <input type="checkbox" name="{$q34_name}" id="comorbidade-outros" class="callFunOutros" value="Outros">
+            Outras
+            <span id="comorbidade-qual" style="display: none;" class="mt-5">
+                <input type="text" name="{$q35_name}" id="{$q35_id}" placeholder="Qual(is)?" class="input w-50">
+            </span>
+        </div>
+        <br>
+        <p style="text-align: center;"><Strong>Marque um “X” no numeral que indica a intensidade de sua DOR</Strong></p>
+        <p style="text-align: center;">(lembrando que 0 indica que não tem nenhuma dor no momento e 10 indica que a dor
+            é
+            insuportável)</p>
+        <p style="text-align: center;"><Strong>Escala Visual Analógica da Dor </Strong></p>
+        <br>
+        <h2 style="text-align: center;">foto da escala </h2>
+
+        <div class="escala-container">
+            <div>
+                <input type="radio" name="q20" id="q20_1" value="1">
+                <label for="q20_1">1</label>
+            </div>
+            <div>
+                <input type="radio" name="q20" id="q20_2" value="2">
+                <label for="q20_2">2</label>
+            </div>
+            <div>
+                <input type="radio" name="q20" id="q20_3" value="3">
+                <label for="q20_3">3</label>
+            </div>
+            <div>
+                <input type="radio" name="q20" id="q20_4" value="4">
+                <label for="q20_4">4</label>
+            </div>
+            <div>
+                <input type="radio" name="q20" id="q20_5" value="5">
+                <label for="q20_5">5</label>
+            </div>
+            <div>
+                <input type="radio" name="q20" id="q20_6" value="6">
+                <label for="q20_6">6</label>
+            </div>
+            <div>
+                <input type="radio" name="q20" id="q20_7" value="7">
+                <label for="q20_7">7</label>
+            </div>
+            <div>
+                <input type="radio" name="q20" id="q20_8" value="8">
+                <label for="q20_8">8</label>
+            </div>
+            <div>
+                <input type="radio" name="q20" id="q20_9" value="9">
+                <label for="q20_9">9</label>
+            </div>
+            <div>
+                <input type="radio" name="q20" id="q20_10" value="10">
+                <label for="q20_10">10</label>
+            </div>
+        </div>
+        <br>
+        <p>Por favor, pinte a região que sente DOR em vermelho e a área que parece ADORMECIMENTO
+            em azul.</p>
+        <h1 style="text-align: center;">foto para desenhar</h1>
+        <p><Strong>Por favor, assinale a resposta correta: </Strong></p>
+        <p>
+            <strong>1) A dor o (a) acorda durante a noite enquanto dorme?</strong>
+            <input type="radio" name="{$q_name}" id="{$q_name}" value="Sim"> Sim
+            <input type="radio" name="{$q_name}" id="{$q_name}" value="Sim"> Não
+        </p>
+        <p>
+            <strong>2) A sua atividade física habitual (em casa ou no trabalho) foi afetada pela dor?</strong>
+            <input type="radio" name="{$q_name}" id="{$q_name}" value="Sim"> Sim
+            <input type="radio" name="{$q_name}" id="{$q_name}" value="Sim"> Não
+        </p>
+        <p>
+            <strong>3) Sua dieta foi prejudicada devido à dor?</strong>
+            <input type="radio" name="{$q_name}" id="{$q_name}" value="Sim"> Sim
+            <input type="radio" name="{$q_name}" id="{$q_name}" value="Sim"> Não
+        </p>
+        <div class="col-xs-12 box-title text-center mt-10" style=" width: 100%;">
+            <p style="font-size:19px;text-align: center;">
+                <strong>******************************Termo de Ciência –
+                    Coparticipação*****************************</strong>
+            </p>
+            <p style="font-size:19px; margin-left: 5px;">No plano de saúde com coparticipação, existe o pagamento de um
+                valor
+                adicional cada vez
+                que o paciente utiliza o plano: consultas, procedimentos, exames e afins.
+                Nos casos de planos empresariais, há uma porcentagem que é descontada no valor do
+                contracheque quando é realizado o atendimento.
+                Para evitar cobranças surpresas, é importante o paciente informar se há ou não
+                coparticipação antes de realizar o procedimento.
+                Eu, {$nomepcte} portador do RG de nº {$identidadepcte}, venho por meio deste informar que meu plano de
+                saúde:
+            <p style="font-size:19px; margin-left: 5px;"><input type="radio" name="{$q_name}" id="{$q_name}"
+                    value="Sim">
+                Tem
+                Coparticipação e estou ciente que haverá uma
+                cobrança do convênio;</p>
+            <p style="font-size:19px; margin-left: 5px;"><input type="radio" name="{$q_name}" id="{$q_name}"
+                    value="Sim">
+                Não
+                tem Coparticipação</p>
+            <p style="font-size:19px; margin-left: 5px;text-align: center;">Recife, {$dataatual} </p>
+        </div>
+    </div>
+</body>
+<script>
+
+</script>
